@@ -1,0 +1,13 @@
+.col-sm-6 img{
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    
+    
+    
+}
+
+.caption{
+    background-color: azure;
+    box-shadow:0 0 20px 7px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,117 @@
+body{
+    background: linear-gradient(to right, cyan 0%, cornflowerblue 100%);
+}
+
+.duty{
+    width: 70px;
+    height: 50px;
+    
+}
+
+.profile-menu{
+    
+    
+    
+    height: 100%;
+    background: #fff;
+    box-shadow:  0 0 25px rgba(#000, 0.2);
+    
+    
+    
+}
+
+.img-container{
+    width: 100%;
+    height: auto;
+    
+    
+    
+    
+    
+}
+.profile-menu img{
+    width: 70%;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    position: relative;
+    margin-bottom: 10px;
+    left: 15%;
+    
+}
+
+.kk{
+    width: 100%;
+    height: auto;
+    
+    background-color: aliceblue;
+}
+
+a{  
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{  
+    text-decoration: none;
+    color: black;
+}
+
+.profile-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid gray;
+    
+    
+    
+}
+
+.profile-menu li{
+    padding: 10px 20px;
+    
+    font-size: 13px;
+    
+}
+
+.profile-menu li{
+    padding: 10px 20px;
+    
+    font-size: 13px;
+    
+}
+.profile-menu li:hover, .profile-container li.active{
+    background: #f7f7f7;
+    border-left: 5px solid #e48418;
+}
+
+.profile-menu li:hover{
+    opacity: 0.9;
+    text-shadow: 1px 1px gray; ;
+}
+
+.profile-menu li:last-child{
+    margin-top: 50px;
+    
+}
+
+.col-md-8 form{
+    margin-left: 30px;
+}
+
+.col-md-8 h2{
+    margin-left: 30px;
+}
+
+.col-md-6 {
+    margin-left: 30px;
+    
+}
+
+.row {
+    width: 100%;
+}
+.col label{
+    margin-left: 15px;
+    
+}

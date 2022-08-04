@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#header{
+    background-image: url(imagens/rj46.png);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ---------- Boas vinda texto-------------- */
+
+.welcome{
+    padding: 50px 100px;
+    margin-top: -140px;
+    background-color:#fff;
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.2);
+    color:gray;
+}
+
+.welcome h1{
+    color: #333;
+
+}
+
+.welcome .btn-secondary{
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color:#fff;
+    background-color: #013f7e;
+}
+
+.welcome .btn:focus{
+    box-shadow: none;
+}
+
+/* ----------------- aBOUT uS   --------------------- */
+
+#about{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#about img{
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.2);
+    
+
+}
+
+#about .col-md-6{
+    padding: 20px 10px;
+}
+
+#about h3{
+    margin: 0px auto;
+}
+
+#about p{
+    margin: 20px auto;
+    color: gray;
+}
+
+
+/* ------------ Serviços ----------------*/
+
+#services{
+    background-color: #efefef;
+    padding-top:80px;
+    padding:80px;
+}
+
+#services .col-md-4{
+   
+}
+
+#services .col-md-4 h4{
+    padding: 5px;
+}
+
+#services .col-md-4 i{
+    padding: 5px;
+     
+}
+
+#services .col-md-4 p{
+    padding: 5px;
+    text-align: justify;
+    color: gray;
+}
+
+/* ------------- Features --------------- */
+
+#features{
+    padding: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(imagens/imagem9.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+#features p {
+    color: gray;
+}
+
+/*-----------------Contato----------------------- */
+
+#footer{
+    margin-top:;
+    padding: 20px;
+    background-color: #efefef;
+    color: #013f7e;
+}
+.footer-logo{
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#footer h1{
+    font-size: 15px;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#footer p{
+    font-size: 12px;
+    text-align: left;
+    
+}
+
+#footer p i{
+    
+}
+
+#final{
+    width: 100%;
+    height: 6vh;
+    padding: 0px;
+    
+    padding: 5px;
+    
+    
+}
+
+
+#final p{
+    
+    
+    
+}
+
