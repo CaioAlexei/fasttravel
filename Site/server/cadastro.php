@@ -1,6 +1,6 @@
 <?php
     session_start();
-        
+    // ola mundo    
     $errors = array();
 
     // connect to the database
