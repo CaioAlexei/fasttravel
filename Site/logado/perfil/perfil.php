@@ -1,5 +1,4 @@
-
-
+<?php session_start(); ?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -26,19 +25,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                 <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                </li>
-                
-                <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-                </li> -->
+                </li>                
                 <li class="nav-item">
                 <a class="nav-link" href="#services">Serviços</a>
                 </li>
@@ -67,22 +54,60 @@
 
     <div class="container">
         <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="row">
+                <div class="col">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" class="form-control" placeholder= "Nome" value="<?php echo $_SESSION['nome']?>">
+                </div>
+                <div class="col">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" class="form-control" placeholder= "Sobrenome" value="<?php echo $_SESSION['sobrenome']?>">
+                </div>
+                
+            </div><br>
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email1">Email</label>
+                        <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" value="<?php echo $_SESSION['email']?>">
+                        <small id="emailHelp" class="form-text text-muted">Nunca iremos compartilhar seu email com ninguém.</small>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                    </div>
+                </div>                                    
             </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" id="cpf" aria-describedby="cpfhelp" placeholder="CPF">
+                        <small class="form-text text-muted">Ex: 123.456.789-12</small>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">CEP</label>
+                        <input type="text" class="form-control" id="cep" placeholder="CEP">
+                        <small class="form-text text-muted">Ex: 12345-678</small>                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="Telefone">Telefone</label>
+                        <input type="text" class="form-control" id="tel" placeholder="tel">
+                        <small class="form-text text-muted">Ex: (12) 9 3456-7890</small>                        
+                    </div>
+                </div>                    
             </div>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>       
-  
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        </form>  
     </div>
 
     
