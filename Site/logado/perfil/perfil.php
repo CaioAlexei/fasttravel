@@ -52,6 +52,12 @@
         </nav>
     </section>
 
+    <div class="container" style="text-align:center;">      
+        <img src="fotos/caio.jpeg" width="100px" heigh="100px" alt="Foto de Perfil" style="margin: auto; border-radius: 50%;" >            
+        <br><label for="nome">Caio Alexei</label><br><br>
+
+    </div>
+    
     <div class="container">
         <form>
             <div class="row">
@@ -79,6 +85,7 @@
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="username" placeholder="Username">
+                        <small id="Usernamehelp" class="form-text text-muted">Ex: Zézinho123</small>
                     </div>
                 </div>                                    
             </div>
