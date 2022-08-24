@@ -2,49 +2,35 @@
 session_start();
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fast Travel</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/compiler/bootstrap.css">
-    <link href="../../fontawesome-free-5.8.2-web/css/all.css" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1e3a3bae57.js" crossorigin="anonymous"></script>
+
+    <title>Fast Travel</title>       
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <!---------------Header--------------->
 
-
     <section id="header">
-
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="index.php">Fast Travel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
-          
+            </button>          
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" href="#services">Serviços</a>
                 </li>
@@ -55,13 +41,11 @@ session_start();
                   <a class="nav-link" href="passeios/mostrarpasseios.php">Passeios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="passeios/mostrarpasseios.php">Perfil - <?php echo $_SESSION['nome']; ?></a>
+                  <a class="nav-link" href="perfil/perfil.php">Perfil - <?php echo $_SESSION['nome']; ?></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="logout.php">Logout</a>
-                </li>
-                
-                
+                </li>               
               </ul>
               <form class="form-inline my-2 my-lg-0" method="post" action="passeios/passeios.php">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="busca">
@@ -73,7 +57,6 @@ session_start();
 
     <!-- Texto de boas vindas-->
 
-
     <section id="welcome">
         <div class="container">
             <div class="welcome text-center">
@@ -83,7 +66,6 @@ session_start();
             </div>
         </div>
     </section>
-
 
     <!-- Sobre nós-->
 
@@ -263,9 +245,9 @@ session_start();
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../../node_modules/popper.js/dist/popper.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
 

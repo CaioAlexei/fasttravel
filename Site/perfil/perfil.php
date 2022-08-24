@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+ini_set('display_errors',1);
+ini_set('display_startup_erros',1);
+error_reporting(E_ALL); 
+session_start();
+include('perfil_code.php');
+?>
+
 
 <!doctype html>
 <html lang="pt-br">
@@ -24,11 +31,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                </li>                
-                <li class="nav-item">
-                <a class="nav-link" href="#services">Serviços</a>
-                </li>
+                <a class="nav-link" href="../index_logado.php">Home <span class="sr-only">(current)</span></a>
+                </li>               
                 <li class="nav-item">
                 <a class="nav-link" href="#footer">Sobre Nós</a>
                 </li>
@@ -59,15 +63,15 @@
     </div>
     
     <div class="container">
-        <form>
+        <form method="post" action="perfil.php">
             <div class="row">
                 <div class="col">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome" class="form-control" placeholder= "Nome" value="<?php echo $_SESSION['nome']?>">
+                    <input type="text" name="nome" class="form-control" placeholder= "Nome" value="<?php echo $_SESSION['nome'];?>">
                 </div>
                 <div class="col">
                     <label for="sobrenome">Sobrenome</label>
-                    <input type="text" id="sobrenome" class="form-control" placeholder= "Sobrenome" value="<?php echo $_SESSION['sobrenome']?>">
+                    <input type="text" name="sobrenome" class="form-control" placeholder= "Sobrenome" value="<?php echo $_SESSION['sobrenome'];?>">
                 </div>
                 
             </div><br>
@@ -77,14 +81,14 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="email1">Email</label>
-                        <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" value="<?php echo $_SESSION['email']?>">
+                        <input type="email" class="form-control" name="email1" aria-describedby="emailHelp" value="<?php echo $_SESSION['email'];?>">
                         <small id="emailHelp" class="form-text text-muted">Nunca iremos compartilhar seu email com ninguém.</small>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $_SESSION['nome_usuario'];?>">
                         <small id="Usernamehelp" class="form-text text-muted">Ex: Zézinho123</small>
                     </div>
                 </div>                                    
@@ -94,26 +98,26 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                        <input type="text" class="form-control" id="cpf" aria-describedby="cpfhelp" placeholder="CPF">
+                        <input type="text" class="form-control" name="cpf" aria-describedby="cpfhelp" placeholder="CPF" value="<?php echo $_SESSION['cpf'];?>">
                         <small class="form-text text-muted">Ex: 123.456.789-12</small>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleInputPassword1">CEP</label>
-                        <input type="text" class="form-control" id="cep" placeholder="CEP">
+                        <input type="text" class="form-control" name="cep" placeholder="CEP" value="<?php echo $_SESSION['cep'];?>">
                         <small class="form-text text-muted">Ex: 12345-678</small>                        
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="Telefone">Telefone</label>
-                        <input type="text" class="form-control" id="tel" placeholder="tel">
+                        <input type="text" class="form-control" name="tel" placeholder="tel" value="<?php echo $_SESSION['celular'];?>">
                         <small class="form-text text-muted">Ex: (12) 9 3456-7890</small>                        
                     </div>
                 </div>                    
             </div>
-            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <button type="submit" name="salvar" class="btn btn-primary">Salvar Alterações</button>
         </form>  
     </div>
 
