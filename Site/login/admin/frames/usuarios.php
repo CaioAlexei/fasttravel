@@ -1,24 +1,22 @@
 <?php
- include "../conexao/connc.php";
+ session_start();
+ $con = new MySQLi('localhost', 'root', '', 'fasttravel');
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin Panel</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../../../node_modules/bootstrap/compiler/bootstrap.css">
-        <link href="../../../fontawesome-free-5.8.2-web/css/all.css" rel="stylesheet">
-        <link href="../css/usu.css" type="text/css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/1e3a3bae57.js" crossorigin="anonymous"></script>
+  <title>Fast Travel</title>       
+
+  <link href="../css/usu.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #B0E0E6;">
   <div class="menu">
     <div class="inmenu">
 
@@ -30,7 +28,7 @@
       <select name="modos" class="select-css" size="1">
         <option value="nome">Nome</option>
         <option value="email">Email</option>
-        <option value="username">Username</option>
+        <option value="nome_usuario">nome_usuario</option>
                           
       </select>
     </form>
@@ -39,6 +37,12 @@
 
 
 <div class="dificil">
+            <style type="text/css">
+                    .table-bordered td, .table-bordered th {
+                      border: 1px solid black;
+                    }
+                    
+            </style>
 
         
             
@@ -66,7 +70,7 @@
                 if(isset($_POST['done']) && ($var != '')){
 
                   $modo=1;
-                  $q ="SELECT * FROM users WHERE $ata ='$var' ";
+                  $q ="SELECT * FROM usuarios_comuns WHERE $ata ='$var' ";
                   $query = mysqli_query($con,$q);
                   while($res = mysqli_fetch_array($query)){
   
@@ -80,7 +84,7 @@
                       <td><?php echo $res['nome']; ?></td>
                       <td><?php echo $res['sobrenome']; ?></td>
                       <td><?php echo $res['email']; ?></td>
-                      <td><?php echo $res['username']; ?></td>
+                      <td><?php echo $res['nome_usuario']; ?></td>
                       <td><?php echo $res['senha']; ?></td>
                       <td><?php echo $res['chave']; ?></td>
                       <td><button class="btn-dark btn " > <a href="operacoes/update.php?id=<?php echo $res['id'];?>">Update</a></button> </td>
@@ -98,7 +102,7 @@
               
               }
               elseif(isset($_POST['done']) && ($var='')){
-                $q ="SELECT * FROM users";
+                $q ="SELECT * FROM usuarios_comuns";
                   $query = mysqli_query($con,$q);
                   while($res = mysqli_fetch_array($query)){
   
@@ -112,7 +116,7 @@
                       <td><?php echo $res['nome']; ?></td>
                       <td><?php echo $res['sobrenome']; ?></td>
                       <td><?php echo $res['email']; ?></td>
-                      <td><?php echo $res['username']; ?></td>
+                      <td><?php echo $res['nome_usuario']; ?></td>
                       <td><?php echo $res['senha']; ?></td>
                       <td><?php echo $res['chave']; ?></td>
                       <td><button class="btn-dark btn " > <a href="operacoes/update.php?id=<?php echo $res['id'];?>">Update</a></button> </td>
@@ -130,7 +134,7 @@
                 else{ 
 
 
-                $q ="SELECT * FROM users";
+                $q ="SELECT * FROM usuarios_comuns";
                 $query = mysqli_query($con,$q);
                 while($res = mysqli_fetch_array($query)){
 
@@ -144,7 +148,7 @@
                     <td><?php echo $res['nome']; ?></td>
                     <td><?php echo $res['sobrenome']; ?></td>
                     <td><?php echo $res['email']; ?></td>
-                    <td><?php echo $res['username']; ?></td>
+                    <td><?php echo $res['nome_usuario']; ?></td>
                     <td><?php echo $res['senha']; ?></td>
                     <td><?php echo $res['chave']; ?></td>
                     <td><button class="btn-dark btn " > <a href="operacoes/update.php?id=<?php echo $res['id'];?>">Update</a></button> </td>
@@ -167,8 +171,8 @@
 
 
 
-    <script src="../../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../../../node_modules/popper.js/dist/popper.js"></script>
-    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
