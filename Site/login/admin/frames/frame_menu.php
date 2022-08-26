@@ -14,8 +14,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body style="background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);">
+<body style="background: #008B8B;">
 
 
     <div class="container-fluid">
@@ -28,7 +27,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
         <style type="text/css">
         .list-group-item{             
             border: 1px solid black;
-            background-color: white;
+            background-color: #5F9EA0;
             color: black;
             text-align: center;            
         }
@@ -38,7 +37,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
         }
         </style>
         <div class="list-group">            
-            <a href="#" class="list-group-item list-group-item-action">Usuários</a>
+            <a href="usuarios.php" target="frame_tela" class="list-group-item list-group-item-action">Usuários</a>
             <a href="#" class="list-group-item list-group-item-action">Relatórios</a>
             <a href="#" class="list-group-item list-group-item-action">oi</a>
             <a href="#" class="list-group-item list-group-item-action">oi</a>
