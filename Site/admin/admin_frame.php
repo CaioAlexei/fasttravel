@@ -1,3 +1,8 @@
+<?php
+include('../validacao.php')
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

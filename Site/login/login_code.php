@@ -126,6 +126,8 @@ $errors = array();
         //$_SESSION['sexo']= $logged_in_user['sexo'];
         $_SESSION['id']= $logged_in_user['id'];
         $_SESSION['sit']= "Logado";
+        $_SESSION['chave']= $logged_in_user['chave'];
+
 
         header('location: ../index.php');
 

@@ -7,7 +7,7 @@ if(IsSet($_SESSION['senha']))
 if(IsSet($_SESSION['chave'])){
   $chave_usuario=$_SESSION['chave'];
 }
-
+s
  
  $query = "SELECT * FROM usuarios_comuns WHERE nome_usuario = '$nome_usuario'";
 
@@ -15,7 +15,7 @@ if(IsSet($_SESSION['chave'])){
  $result = mysqli_query($con, $query);
  $logged = mysqli_fetch_assoc($result);
 
-if(empty($nome_usuario) OR empty ($senha_usuario)){
+if(empty($nome_usuario) OR empty($senha_usuario) OR empty($chave_usuario)){
    
        
        
@@ -62,26 +62,23 @@ if(empty($nome_usuario) OR empty ($senha_usuario)){
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
-          </nav>
+        </nav>
 
     </section>
 
     <section id="welcome">
-      <div class="container">
-          
+      <div class="container">          
           <div class="welcome text-left">
-                <h1>Alerta !</h1><br>
-              <?php
-       echo "Você não efetuou o Login!<br />";
-       echo"<a href='../../login/login.php'>Efetuar Login</a> <br />";
-       echo"<a href='../../index.html'>Voltar para pagina incial</a>";
-       
-       mysqli_close($con);
-    ?>
-            
-          </div>
+            <h1>Alerta !</h1><br>
+            <?php
+              echo "Você não efetuou o Login!<br />";
+              echo"<a href='../../login/login.php'>Efetuar Login</a> <br />";
+              echo"<a href='../../index.html'>Voltar para pagina incial</a>";                
+              mysqli_close($con);
+            ?>                      
+        </div>
       </div>
-  </section>
+    </section>
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../../../node_modules/jquery/dist/jquery.js"></script>
@@ -102,23 +99,16 @@ if ($logged['senha'] !=   $senha_usuario ) {
    echo"<a href='index.html'>Voltar para pagina incial</a>";
    echo"$nome_usuario,$senha_usuario,$print,$print2";
    mysqli_close($con);
-   exit; 
-  
-    
-                    
-  
+   exit;
 }
 
 if ($logged['chave'] !=   0 ) {
    echo "Você não tem a autorização necessária para continuar!<br />";
    echo"<a href='login.php'>Efetuar Login</a> <br />";
    echo"<a href='index.html'>Voltar para pagina incial</a>";
-   echo"$nome_usuario,$senha_usuario";
-    
+   echo"$nome_usuario,$senha_usuario";    
    mysqli_close($con);
-   exit; 
-                    
-  
+   exit;
 }
  
  

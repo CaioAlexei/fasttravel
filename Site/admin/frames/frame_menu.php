@@ -37,7 +37,7 @@
         }
         </style>
         <div class="list-group">            
-            <a href="usuarios.php" target="frame_tela" class="list-group-item list-group-item-action">Usuários</a>
+            <a href="usuarios/usuarios.php" target="frame_tela" class="list-group-item list-group-item-action">Usuários</a>
             <a href="#" class="list-group-item list-group-item-action">Relatórios</a>
             <a href="#" class="list-group-item list-group-item-action">oi</a>
             <a href="#" class="list-group-item list-group-item-action">oi</a>
